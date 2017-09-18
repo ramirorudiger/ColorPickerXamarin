@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ColorPicker"
+             x:Class="ColorPicker.MainPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" 
+                    iOS="10, 20, 10, 10" 
+                    Android="10, 0, 10, 10" 
+                    WinPhone="10, 0, 10, 10" />
+    </ContentPage.Padding>
+    <StackLayout>
+        <Label Text="Color Slider" FontSize="Large" />
+
+        <Label x:Name="lblRed" />
+        <Slider x:Name="sldRed" Minimum="0" Maximum="255" ValueChanged="OnSliderValueChanged" />
+
+        <Label x:Name="lblGreen" />
+        <Slider x:Name="sldGreen" Minimum="0" Maximum="255" ValueChanged="OnSliderValueChanged" />
+
+        <Label x:Name="lblBlue" />
+        <Slider x:Name="sldBlue" Minimum="0" Maximum="255" ValueChanged="OnSliderValueChanged" />
+
+        <Label Text="Html color" />
+        <Entry x:Name="txtHtmlColor" />
+
+        <BoxView x:Name="boxColor" VerticalOptions="FillAndExpand" />
+
+    </StackLayout>
+
+</ContentPage>
